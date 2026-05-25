@@ -7,10 +7,15 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
 
-  <title>Odontología Pamela | Clínica Dental en Guayaquil</title>
+  <title>Odontología Pamela | Consultorio Dental en Quevedo</title>
 
   <meta name="description"
-        content="Odontología Pamela, consultorio dental en Guayaquil. Atención odontológica profesional, estética dental, limpieza, ortodoncia e implantes con cita previa.">
+        content="Odontología Pamela, consultorio odontológico en Quevedo. Atención dental profesional, estética dental, limpieza, ortodoncia, rehabilitación oral e implantes con cita previa.">
+
+  <meta name="keywords"
+        content="odontología en Quevedo, dentista en Quevedo, clínica dental Quevedo, estética dental, limpieza dental, ortodoncia, implantes dentales, odontología familiar">
+
+  <meta name="author" content="Odontología Pamela">
 
   <style>
 
@@ -21,6 +26,8 @@
       --turquesa-suave: #e9fbff;
       --borde-azul: #bdeef7;
       --texto: #333333;
+      --whatsapp: #25D366;
+      --whatsapp-oscuro: #128C7E;
     }
 
     body {
@@ -182,14 +189,16 @@
       padding-bottom: 6px;
     }
 
-    .services-grid {
+    .services-grid,
+    .trust-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
       margin-top: 1.5rem;
     }
 
-    .card {
+    .card,
+    .trust-card {
       background: #ffffff;
       border: 1px solid var(--borde-azul);
       border-radius: 14px;
@@ -198,13 +207,15 @@
       transition: all 0.25s ease;
     }
 
-    .card:hover {
+    .card:hover,
+    .trust-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 10px 24px rgba(0,119,182,0.14);
       border-color: var(--azul-claro);
     }
 
-    .card h3 {
+    .card h3,
+    .trust-card h3 {
       color: var(--azul-oscuro);
       margin-top: 0;
     }
@@ -249,6 +260,25 @@
       transform: translateY(-2px);
     }
 
+    .whatsapp-button {
+      background:
+        linear-gradient(
+          90deg,
+          var(--whatsapp-oscuro),
+          var(--whatsapp)
+        );
+      box-shadow: 0 4px 12px rgba(37,211,102,0.30);
+    }
+
+    .whatsapp-button:hover {
+      background:
+        linear-gradient(
+          90deg,
+          #0d6f63,
+          #20bd5a
+        );
+    }
+
     .whatsapp-float {
       position: fixed;
       right: 18px;
@@ -256,8 +286,8 @@
       background:
         linear-gradient(
           90deg,
-          var(--azul-oscuro),
-          var(--azul-claro)
+          var(--whatsapp-oscuro),
+          var(--whatsapp)
         );
       color: white;
       padding: 13px 18px;
@@ -421,31 +451,28 @@
   <nav>
     <a href="#nosotros">Nosotros</a>
     <a href="#servicios">Servicios</a>
+    <a href="#confianza">Confianza</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
   <div class="social-bar">
 
-    <a href="https://share.google/dVRopUNmuhwbq1Y1g"
-       target="_blank"
-       aria-label="Ubicación">
+    <a href="#"
+       aria-label="Ubicación en Google Maps">
       <img src="ubicacion.png" alt="Ubicación">
     </a>
 
-    <a href="https://www.instagram.com/"
-       target="_blank"
+    <a href="#"
        aria-label="Instagram">
       <img src="instagram.png" alt="Instagram">
     </a>
 
-    <a href="https://www.facebook.com/"
-       target="_blank"
+    <a href="#"
        aria-label="Facebook">
       <img src="facebook.png" alt="Facebook">
     </a>
 
-    <a href="https://www.tiktok.com/"
-       target="_blank"
+    <a href="#"
        aria-label="TikTok">
       <img src="tiktok.png" alt="TikTok">
     </a>
@@ -457,20 +484,20 @@
     <div class="hero-box">
 
       <h1>
-        Odontología Integral y Estética Dental en Guayaquil
+        Sonrisas saludables y estética dental profesional en Quevedo
       </h1>
 
       <p>
-        Atención odontológica profesional para el cuidado de tu sonrisa,
+        Atención odontológica integral para el cuidado de tu sonrisa,
         con enfoque preventivo, estético y personalizado.
-        Atendemos con cita previa.
+        Atendemos con cita previa en la ciudad de Quevedo.
       </p>
 
       <a
-        href="https://wa.me/593984567660?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
-        class="button">
+        href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
+        class="button whatsapp-button">
 
-        Agendar cita odontológica
+        Agendar cita por WhatsApp
 
       </a>
 
@@ -485,7 +512,7 @@
       <h2>Sobre Odontología Pamela</h2>
 
       <p>
-        En Odontología Pamela brindamos atención dental integral,
+        En Odontología Pamela brindamos atención dental integral en Quevedo,
         priorizando la prevención, el diagnóstico oportuno y el cuidado estético
         de la sonrisa.
       </p>
@@ -592,6 +619,44 @@
 
     </section>
 
+    <section id="confianza">
+
+      <h2>Por qué elegirnos</h2>
+
+      <div class="trust-grid">
+
+        <div class="trust-card">
+          <h3>Atención profesional</h3>
+          <p>
+            Evaluación personalizada para orientar cada tratamiento según las necesidades reales del paciente.
+          </p>
+        </div>
+
+        <div class="trust-card">
+          <h3>Prevención y cuidado</h3>
+          <p>
+            Enfoque preventivo para conservar la salud oral y detectar oportunamente posibles problemas dentales.
+          </p>
+        </div>
+
+        <div class="trust-card">
+          <h3>Estética dental</h3>
+          <p>
+            Tratamientos orientados a mejorar la apariencia, armonía y confianza de la sonrisa.
+          </p>
+        </div>
+
+        <div class="trust-card">
+          <h3>Bioseguridad</h3>
+          <p>
+            Atención responsable, ordenada y enfocada en la seguridad, higiene y bienestar del paciente.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
     <section id="contacto">
 
       <h2>Contacto</h2>
@@ -603,15 +668,20 @@
 
       <p>
         <strong>Ubicación:</strong>
-        Guayaquil, Ecuador.
+        Quevedo, Los Ríos, Ecuador.
         Atención con cita previa.
       </p>
 
-      <a
-        href="https://wa.me/593984567660?text=Hola,%20deseo%20información%20para%20agendar%20una%20cita%20odontológica."
-        class="button">
+      <p>
+        <strong>WhatsApp:</strong>
+        +593 99 747 2927
+      </p>
 
-        Enviar mensaje
+      <a
+        href="https://wa.me/593997472927?text=Hola,%20deseo%20información%20para%20agendar%20una%20cita%20odontológica."
+        class="button whatsapp-button">
+
+        Enviar mensaje por WhatsApp
 
       </a>
 
@@ -624,7 +694,7 @@
   </a>
 
   <a
-    href="https://wa.me/593984567660?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
+    href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
     class="whatsapp-float">
 
     WhatsApp
