@@ -20,7 +20,7 @@
       --azul-oscuro: #023e8a;
       --turquesa-suave: #e9fbff;
       --borde-azul: #bdeef7;
-      --texto: #333333; 
+      --texto: #333333;
       --whatsapp: #25D366;
       --whatsapp-oscuro: #128C7E;
     }
@@ -93,17 +93,14 @@
       font-size: 0.95rem;
     }
 
-    .social-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
+    .social-bar img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
       background: #ffffff;
+      border-radius: 50%;
+      padding: 4px;
       border: 1px solid var(--borde-azul);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--azul);
-      font-size: 1.15rem;
       box-shadow: 0 3px 10px rgba(0,119,182,0.12);
     }
 
@@ -170,13 +167,13 @@
       transition: all 0.25s ease;
     }
 
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
     .whatsapp-button {
       background: linear-gradient(90deg, var(--whatsapp-oscuro), var(--whatsapp));
       box-shadow: 0 5px 14px rgba(37,211,102,0.32);
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
     }
 
     main {
@@ -189,12 +186,17 @@
       margin-bottom: 42px;
     }
 
+    h2 {
+      color: var(--azul-oscuro);
+      border-bottom: 2px solid var(--azul);
+      padding-bottom: 6px;
+    }
+
     .section-title {
       text-align: center;
       color: var(--azul-oscuro);
       font-size: 1.45rem;
       margin-bottom: 25px;
-      position: relative;
       font-weight: bold;
     }
 
@@ -207,12 +209,6 @@
       background: var(--azul-claro);
       vertical-align: middle;
       margin: 0 18px;
-    }
-
-    h2 {
-      color: var(--azul-oscuro);
-      border-bottom: 2px solid var(--azul);
-      padding-bottom: 6px;
     }
 
     .intro-box {
@@ -277,7 +273,6 @@
     .trust-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 0;
       background: #e9fbff;
       border-radius: 16px;
       overflow: hidden;
@@ -330,10 +325,6 @@
       gap: 18px;
       align-items: center;
       text-align: center;
-    }
-
-    .contact-item {
-      font-size: 0.98rem;
     }
 
     .contact-item strong {
@@ -458,7 +449,7 @@
 <body>
 
   <header id="inicio" class="top-logo">
-    <img src="logotipo.jpg" alt="Logotipo de Odontología Pamela">
+    <img src="logotipo.png" alt="Logotipo de Odontología Pamela">
   </header>
 
   <nav>
@@ -470,14 +461,30 @@
   </nav>
 
   <div class="social-bar">
-    <a href="#" aria-label="Ubicación"><span class="social-icon">📍</span> Ubicación</a>
-    <a href="#" aria-label="Instagram"><span class="social-icon">◎</span> Instagram</a>
-    <a href="#" aria-label="Facebook"><span class="social-icon">f</span> Facebook</a>
-    <a href="#" aria-label="TikTok"><span class="social-icon">♪</span> TikTok</a>
+    <a href="#" aria-label="Ubicación">
+      <img src="ubicacion.png" alt="Ubicación">
+      Ubicación
+    </a>
+
+    <a href="#" aria-label="Instagram">
+      <img src="instagram.png" alt="Instagram">
+      Instagram
+    </a>
+
+    <a href="#" aria-label="Facebook">
+      <img src="facebook.png" alt="Facebook">
+      Facebook
+    </a>
+
+    <a href="#" aria-label="TikTok">
+      <img src="tiktok.png" alt="TikTok">
+      TikTok
+    </a>
   </div>
 
   <section class="hero">
     <div class="hero-content">
+
       <div class="hero-text">
         <h1>
           Sonrisas saludables y
@@ -499,6 +506,7 @@
       <div class="hero-photo">
         <img src="odontologa.png" alt="Odontóloga profesional de Odontología Pamela">
       </div>
+
     </div>
   </section>
 
@@ -634,7 +642,7 @@
 
   </main>
 
-  <section class="contact-footer">
+  <section class="contact-footer" id="contacto-footer">
     <div class="contact-footer-grid">
 
       <div class="contact-item">
@@ -663,7 +671,7 @@
 
   <a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
      class="whatsapp-float">
-    WhatsApp 
+    WhatsApp
   </a>
 
   <footer>
