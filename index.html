@@ -4,325 +4,448 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./logotipo.png?v=15">
-  <link rel="shortcut icon" type="image/png" href="./logotipo.png?v=15">
-  <link rel="apple-touch-icon" href="./logotipo.png?v=15">
+  <link rel="icon" type="image/png" sizes="32x32" href="./logotipo.png?v=20">
+  <link rel="shortcut icon" type="image/png" href="./logotipo.png?v=20">
+  <link rel="apple-touch-icon" href="./logotipo.png?v=20">
 
   <title>Odontología Pamela | Consultorio Dental en Quevedo</title>
 
   <meta name="description" content="Odontología Pamela, consultorio odontológico en Quevedo. Atención dental profesional, estética dental, limpieza, ortodoncia, rehabilitación oral e implantes con cita previa.">
-  <meta name="keywords" content="odontología en Quevedo, dentista en Quevedo, clínica dental Quevedo, estética dental, limpieza dental, ortodoncia, implantes dentales, odontología familiar">
-  <meta name="author" content="Odontología Pamela">
 
   <style>
     :root {
-      --azul: #0077b6;
-      --azul-claro: #00b4d8;
-      --azul-oscuro: #023e8a;
-      --turquesa-suave: #e9fbff;
-      --borde-azul: #bdeef7;
-      --texto: #333333;
-      --whatsapp: #25D366;
-      --whatsapp-oscuro: #128C7E;
+      --azul:#0077b6;
+      --azul-claro:#00b4d8;
+      --azul-oscuro:#023e8a;
+      --turquesa-suave:#e9fbff;
+      --borde-azul:#bdeef7;
+      --texto:#333333;
+      --whatsapp:#25D366;
+      --whatsapp-oscuro:#128C7E;
     }
 
-    * {
-      box-sizing: border-box;
+    *{ box-sizing:border-box; }
+
+    body{
+      font-family:Arial,sans-serif;
+      margin:0;
+      background:#fff;
+      color:var(--texto);
+      line-height:1.6;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: var(--texto);
-      line-height: 1.6;
+    .top-logo{
+      text-align:center;
+      padding:18px 15px 10px;
+      background:#fff;
     }
 
-    .top-logo {
-      text-align: center;
-      padding: 18px 15px 10px;
-      background: #ffffff;
+    .top-logo img{
+      max-width:430px;
+      width:88%;
+      height:auto;
     }
 
-    .top-logo img {
-      max-width: 430px;
-      width: 88%;
-      height: auto;
+    nav{
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
+      text-align:center;
+      padding:12px 5px;
+      position:sticky;
+      top:0;
+      z-index:100;
     }
 
-    nav {
-      background: linear-gradient(90deg, var(--azul-oscuro), var(--azul), var(--azul-claro));
-      text-align: center;
-      padding: 12px 5px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin:0 12px;
+      font-weight:bold;
+      padding:8px 14px;
+      border-radius:22px;
+      display:inline-block;
+      font-size:0.95rem;
     }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-      padding: 8px 14px;
-      border-radius: 22px;
-      display: inline-block;
-      transition: all 0.25s ease;
-      font-size: 0.95rem;
+    .social-bar{
+      background:#f2fcff;
+      text-align:center;
+      padding:12px 8px;
+      border-bottom:1px solid var(--borde-azul);
     }
 
-    nav a:hover {
-      background: rgba(255,255,255,0.22);
-      transform: translateY(-1px);
+    .social-bar a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--azul-oscuro);
+      text-decoration:none;
+      font-weight:bold;
+      margin:5px 18px;
+      font-size:0.95rem;
     }
 
-    .social-bar {
-      background: #f2fcff;
-      text-align: center;
-      padding: 12px 8px;
-      border-bottom: 1px solid var(--borde-azul);
+    .social-bar img{
+      width:30px;
+      height:30px;
+      object-fit:contain;
+      background:#fff;
+      border-radius:50%;
+      padding:4px;
+      border:1px solid var(--borde-azul);
+      box-shadow:0 3px 10px rgba(0,119,182,0.12);
     }
 
-    .social-bar a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--azul-oscuro);
-      text-decoration: none;
-      font-weight: bold;
-      margin: 5px 18px;
-      font-size: 0.95rem;
-    }
-
-    .social-bar img {
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-      background: #ffffff;
-      border-radius: 50%;
-      padding: 4px;
-      border: 1px solid var(--borde-azul);
-      box-shadow: 0 3px 10px rgba(0,119,182,0.12);
-    }
-
-    .hero {
+    .hero{
       background:
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,0.82) 0%,
-          rgba(255,255,255,0.68) 42%,
-          rgba(255,255,255,0.08) 100%
-        ),
+        linear-gradient(90deg,rgba(255,255,255,0.82) 0%,rgba(255,255,255,0.68) 42%,rgba(255,255,255,0.08) 100%),
         url('banner.jpeg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-bottom: 1px solid var(--borde-azul);
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      border-bottom:1px solid var(--borde-azul);
     }
 
-    .hero-content {
-      max-width: 1350px;
-      margin: auto;
-      min-height: 520px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: end;
-      gap: 0;
-      padding: 20px 50px 0;
-      overflow: hidden;
+    .hero-content{
+      max-width:1350px;
+      margin:auto;
+      min-height:520px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:end;
+      gap:0;
+      padding:20px 50px 0;
+      overflow:hidden;
     }
 
-    .hero-text {
-      padding-bottom: 85px;
+    .hero-text{
+      padding-bottom:85px;
     }
 
-    .hero-text h1 {
-      color: var(--azul-oscuro);
-      font-size: 2.75rem;
-      line-height: 1.1;
-      margin: 0 0 18px;
-      max-width: 600px;
+    .hero-text h1{
+      color:var(--azul-oscuro);
+      font-size:2.75rem;
+      line-height:1.1;
+      margin:0 0 18px;
+      max-width:600px;
     }
 
-    .hero-text h1 span {
-      color: var(--azul-claro);
-      display: block;
+    .hero-text h1 span{
+      color:var(--azul-claro);
+      display:block;
     }
 
-    .hero-text p {
-      color: #1f3d5a;
-      font-size: 1.08rem;
-      max-width: 560px;
-      margin-bottom: 22px;
+    .hero-text p{
+      color:#1f3d5a;
+      font-size:1.08rem;
+      max-width:560px;
+      margin-bottom:22px;
     }
 
-    .hero-photo {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      height: 100%;
+    .hero-photo{
+      display:flex;
+      justify-content:center;
+      align-items:flex-end;
+      height:100%;
     }
 
-    .hero-photo img {
-      max-width: 580px;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      object-position: bottom center;
-      margin-bottom: 0;
-      border-radius: 0;
-      display: block;
-      filter: drop-shadow(0 18px 35px rgba(0,62,138,0.20));
+    .hero-photo img{
+      max-width:580px;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      object-position:bottom center;
+      margin-bottom:0;
+      border-radius:0;
+      display:block;
+      filter:drop-shadow(0 18px 35px rgba(0,62,138,0.20));
     }
 
-    .button {
-      display: inline-block;
-      color: #fff;
-      padding: 13px 24px;
-      border-radius: 28px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 8px;
-      transition: all 0.25s ease;
+    .button{
+      display:inline-block;
+      color:#fff;
+      padding:13px 24px;
+      border-radius:28px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-top:8px;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
+    .whatsapp-button{
+      background:linear-gradient(90deg,var(--whatsapp-oscuro),var(--whatsapp));
+      box-shadow:0 5px 14px rgba(37,211,102,0.32);
     }
 
-    .whatsapp-button {
-      background: linear-gradient(90deg, var(--whatsapp-oscuro), var(--whatsapp));
-      box-shadow: 0 5px 14px rgba(37,211,102,0.32);
+    main{
+      max-width:1120px;
+      margin:auto;
+      padding:28px 18px;
     }
 
-    main {
-      max-width: 1120px;
-      margin: auto;
-      padding: 28px 18px;
+    section{ margin-bottom:42px; }
+
+    h2{
+      color:var(--azul-oscuro);
+      border-bottom:2px solid var(--azul);
+      padding-bottom:6px;
     }
 
-    section {
-      margin-bottom: 42px;
+    .section-title{
+      text-align:center;
+      color:var(--azul-oscuro);
+      font-size:1.45rem;
+      margin-bottom:25px;
+      font-weight:bold;
     }
 
-    h2 {
-      color: var(--azul-oscuro);
-      border-bottom: 2px solid var(--azul);
-      padding-bottom: 6px;
+    .section-title::before,
+    .section-title::after{
+      content:"";
+      display:inline-block;
+      width:130px;
+      height:1px;
+      background:var(--azul-claro);
+      vertical-align:middle;
+      margin:0 18px;
     }
 
-    .intro-box {
-      background: linear-gradient(180deg, #ffffff, var(--turquesa-suave));
-      border: 1px solid var(--borde-azul);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 8px 22px rgba(0,119,182,0.10);
+    .intro-box{
+      background:linear-gradient(180deg,#fff,var(--turquesa-suave));
+      border:1px solid var(--borde-azul);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:0 8px 22px rgba(0,119,182,0.10);
     }
 
-    .whatsapp-float {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      background: linear-gradient(90deg, var(--whatsapp-oscuro), var(--whatsapp));
-      color: white;
-      padding: 13px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 5px 16px rgba(0,0,0,0.28);
-      z-index: 999;
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(155px,1fr));
+      gap:16px;
+      margin-top:18px;
     }
 
-    .home-float {
-      position: fixed;
-      left: 18px;
-      bottom: 18px;
-      background: #ffffff;
-      color: var(--azul-oscuro);
-      padding: 13px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid var(--borde-azul);
-      box-shadow: 0 5px 16px rgba(0,0,0,0.18);
-      z-index: 999;
+    .card{
+      background:#fff;
+      border:1px solid #e3f3f8;
+      border-radius:15px;
+      padding:18px 12px;
+      box-shadow:0 5px 16px rgba(0,0,0,0.06);
+      text-align:center;
+      min-height:210px;
     }
 
-    @media (max-width: 800px) {
+    .icon{
+      font-size:2.3rem;
+      color:var(--azul-claro);
+      margin-bottom:8px;
+    }
 
-      .top-logo {
-        padding: 2px 10px 2px;
+    .card h3{
+      color:var(--azul-oscuro);
+      margin:4px 0 8px;
+      font-size:1rem;
+      text-transform:uppercase;
+    }
+
+    .card p{
+      font-size:0.88rem;
+      margin:0;
+      color:#334;
+    }
+
+    .notice{
+      background:var(--turquesa-suave);
+      border-left:5px solid var(--azul);
+      padding:1rem;
+      border-radius:8px;
+      margin-top:1.5rem;
+    }
+
+    .trust-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      background:#e9fbff;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--borde-azul);
+      box-shadow:0 8px 22px rgba(0,119,182,0.10);
+    }
+
+    .trust-card{
+      padding:20px;
+      display:grid;
+      grid-template-columns:45px 1fr;
+      gap:12px;
+      border-right:1px solid var(--borde-azul);
+    }
+
+    .trust-card:last-child{ border-right:none; }
+
+    .trust-card h3{
+      margin:0 0 4px;
+      color:var(--azul-oscuro);
+      font-size:0.98rem;
+      text-transform:uppercase;
+    }
+
+    .trust-card p{
+      margin:0;
+      font-size:0.88rem;
+    }
+
+    .contact-footer{
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
+      color:white;
+      padding:26px 18px;
+      margin-top:20px;
+    }
+
+    .contact-footer-grid{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:18px;
+      text-align:center;
+    }
+
+    .contact-item strong{
+      display:block;
+      font-size:1.05rem;
+    }
+
+    .footer-icon{
+      font-size:2rem;
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:linear-gradient(90deg,var(--whatsapp-oscuro),var(--whatsapp));
+      color:#fff;
+      padding:13px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 5px 16px rgba(0,0,0,0.28);
+      z-index:999;
+    }
+
+    .home-float{
+      position:fixed;
+      left:18px;
+      bottom:18px;
+      background:#fff;
+      color:var(--azul-oscuro);
+      padding:13px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      border:1px solid var(--borde-azul);
+      box-shadow:0 5px 16px rgba(0,0,0,0.18);
+      z-index:999;
+    }
+
+    footer{
+      background:#f4f4f4;
+      text-align:center;
+      font-size:0.9rem;
+      padding:2rem 1rem 5rem;
+      color:#555;
+    }
+
+    footer h4{
+      color:var(--azul-oscuro);
+      margin-top:1.5rem;
+    }
+
+    @media(max-width:800px){
+      .top-logo{
+        padding:2px 10px 2px;
       }
 
-      .top-logo img {
-        max-width: 180px;
-        width: 62%;
-        height: auto;
+      .top-logo img{
+        max-width:180px;
+        width:62%;
+        height:auto;
       }
 
-      .hero {
+      .hero{
         background:
-          linear-gradient(
-            180deg,
-            rgba(255,255,255,0.96),
-            rgba(233,251,255,0.88)
-          ),
+          linear-gradient(180deg,rgba(255,255,255,0.96),rgba(233,251,255,0.88)),
           url('bannermovil.jpeg');
-        background-size: cover;
-        background-position: center;
+        background-size:cover;
+        background-position:center;
       }
 
-      .hero-content {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 28px 18px 0;
-        text-align: center;
+      .hero-content{
+        grid-template-columns:1fr;
+        min-height:auto;
+        padding:28px 18px 0;
+        text-align:center;
       }
 
-      .hero-text {
-        padding-bottom: 0;
+      .hero-text{
+        padding-bottom:0;
       }
 
-      .hero-text h1 {
-        font-size: 1.8rem;
-        margin: auto auto 14px;
+      .hero-text h1{
+        font-size:1.8rem;
+        margin:auto auto 14px;
       }
 
-      .hero-text p {
-        font-size: 0.98rem;
-        margin-left: auto;
-        margin-right: auto;
+      .hero-text p{
+        font-size:0.98rem;
+        margin-left:auto;
+        margin-right:auto;
       }
 
-      .hero-photo {
-        margin-top: 20px;
-        align-items: flex-end;
+      .hero-photo{
+        margin-top:20px;
+        align-items:flex-end;
       }
 
-      .hero-photo img {
-        max-width: 320px;
-        width: 100%;
-        height: auto;
-        margin-bottom: 0;
-        border-radius: 22px;
-        filter: drop-shadow(0 12px 22px rgba(0,62,138,0.18));
+      .hero-photo img{
+        max-width:320px;
+        width:100%;
+        height:auto;
+        margin-bottom:0;
+        border-radius:22px;
+        filter:drop-shadow(0 12px 22px rgba(0,62,138,0.18));
       }
 
-      nav a {
-        margin: 4px 4px;
-        font-size: 0.85rem;
-        padding: 7px 10px;
+      nav a{
+        margin:4px 4px;
+        font-size:0.85rem;
+        padding:7px 10px;
       }
 
-      .social-bar a {
-        margin: 5px 8px;
-        font-size: 0.85rem;
+      .social-bar a{
+        margin:5px 8px;
+        font-size:0.85rem;
+      }
+
+      .section-title::before,
+      .section-title::after{
+        width:45px;
+        margin:0 8px;
+      }
+
+      .trust-card{
+        border-right:none;
+        border-bottom:1px solid var(--borde-azul);
+      }
+
+      .trust-card:last-child{
+        border-bottom:none;
       }
 
       .whatsapp-float,
-      .home-float {
-        font-size: 0.8rem;
-        padding: 10px 12px;
+      .home-float{
+        font-size:0.8rem;
+        padding:10px 12px;
       }
     }
   </style>
@@ -330,140 +453,125 @@
 
 <body>
 
-  <header id="inicio" class="top-logo">
-    <img src="logotipo.png" alt="Logotipo de Odontología Pamela">
-  </header>
+<header id="inicio" class="top-logo">
+  <img src="logotipo.png" alt="Logotipo de Odontología Pamela">
+</header>
 
-  <nav>
-    <a href="#inicio">INICIO</a>
-    <a href="#nosotros">NOSOTROS</a>
-    <a href="#servicios">SERVICIOS</a>
-    <a href="#confianza">CONFIANZA</a>
-    <a href="#contacto">CONTACTO</a>
-  </nav>
+<nav>
+  <a href="#inicio">INICIO</a>
+  <a href="#nosotros">NOSOTROS</a>
+  <a href="#servicios">SERVICIOS</a>
+  <a href="#confianza">CONFIANZA</a>
+  <a href="#contacto">CONTACTO</a>
+</nav>
 
-  <div class="social-bar">
-    <a href="#">
-      <img src="ubicacion.png" alt="Ubicación">
-      Ubicación
-    </a>
+<div class="social-bar">
+  <a href="#"><img src="ubicacion.png" alt="Ubicación">Ubicación</a>
+  <a href="#"><img src="instagram.png" alt="Instagram">Instagram</a>
+  <a href="#"><img src="facebook.png" alt="Facebook">Facebook</a>
+  <a href="#"><img src="tiktok.png" alt="TikTok">TikTok</a>
+</div>
 
-    <a href="#">
-      <img src="instagram.png" alt="Instagram">
-      Instagram
-    </a>
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>
+        Sonrisas saludables y
+        <span>estética dental profesional</span>
+        en Quevedo
+      </h1>
 
-    <a href="#">
-      <img src="facebook.png" alt="Facebook">
-      Facebook
-    </a>
+      <p>
+        Atención odontológica integral para el cuidado de tu sonrisa, con enfoque preventivo,
+        estético y personalizado. Atendemos con cita previa en la ciudad de Quevedo.
+      </p>
 
-    <a href="#">
-      <img src="tiktok.png" alt="TikTok">
-      TikTok
-    </a>
+      <a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica." class="button whatsapp-button">
+        Agendar cita por WhatsApp
+      </a>
+    </div>
+
+    <div class="hero-photo">
+      <img src="odontologa.png" alt="Odontóloga profesional de Odontología Pamela">
+    </div>
+  </div>
+</section>
+
+<main>
+
+<section id="nosotros">
+  <h2>Sobre Odontología Pamela</h2>
+  <div class="intro-box">
+    <p>En Odontología Pamela brindamos atención dental integral en Quevedo, priorizando la prevención, el diagnóstico oportuno y el cuidado estético de la sonrisa.</p>
+    <p>Cada tratamiento se define según valoración odontológica personalizada, con atención profesional, responsable y orientada al bienestar del paciente.</p>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="section-title">🦷 NUESTROS SERVICIOS</div>
+
+  <div class="services-grid">
+    <div class="card"><div class="icon">🔎</div><h3>Odontología General</h3><p>Consulta, diagnóstico, limpieza dental profesional y control preventivo.</p></div>
+    <div class="card"><div class="icon">✨</div><h3>Estética Dental</h3><p>Diseño de sonrisa, blanqueamiento, carillas y armonización estética.</p></div>
+    <div class="card"><div class="icon">🦷</div><h3>Ortodoncia</h3><p>Valoración para brackets, ortodoncia convencional y seguimiento.</p></div>
+    <div class="card"><div class="icon">⚙️</div><h3>Rehabilitación Oral</h3><p>Coronas, puentes, prótesis removibles e implantes según valoración.</p></div>
+    <div class="card"><div class="icon">🛡️</div><h3>Odontología Preventiva</h3><p>Profilaxis, aplicación de flúor, sellantes y educación en higiene oral.</p></div>
+    <div class="card"><div class="icon">👨‍👩‍👧</div><h3>Atención Familiar</h3><p>Atención para adultos, orientación para niños y control familiar.</p></div>
   </div>
 
-  <section class="hero">
-    <div class="hero-content">
+  <div class="notice">
+    Todo tratamiento odontológico se define únicamente después de una valoración profesional personalizada.
+  </div>
+</section>
 
-      <div class="hero-text">
-        <h1>
-          Sonrisas saludables y
-          <span>estética dental profesional</span>
-          en Quevedo
-        </h1>
+<section id="confianza">
+  <div class="section-title">CONFIANZA Y CUIDADO</div>
 
-        <p>
-          Atención odontológica integral para el cuidado de tu sonrisa, con enfoque preventivo,
-          estético y personalizado. Atendemos con cita previa en la ciudad de Quevedo.
-        </p>
+  <div class="trust-grid">
+    <div class="trust-card"><div class="icon">👩‍⚕️</div><div><h3>Atención profesional</h3><p>Evaluación personalizada y orientación según las necesidades del paciente.</p></div></div>
+    <div class="trust-card"><div class="icon">🦷</div><div><h3>Equipo moderno</h3><p>Imagen clínica actual, ordenada y enfocada en atención odontológica integral.</p></div></div>
+    <div class="trust-card"><div class="icon">🛡️</div><div><h3>Bioseguridad</h3><p>Atención responsable, higiene y cuidado durante cada valoración.</p></div></div>
+    <div class="trust-card"><div class="icon">💙</div><div><h3>Cuidado integral</h3><p>Nos enfocamos en la salud bucal, estética y bienestar general del paciente.</p></div></div>
+  </div>
+</section>
 
-        <a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
-           class="button whatsapp-button">
-          Agendar cita por WhatsApp
-        </a>
-      </div>
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div class="intro-box">
+    <p>Para agendar una cita o recibir información general, contáctanos vía WhatsApp.</p>
+    <p><strong>Ubicación:</strong> Quevedo, Los Ríos, Ecuador. Atención con cita previa.</p>
+    <p><strong>WhatsApp:</strong> +593 99 747 2927</p>
+    <a href="https://wa.me/593997472927?text=Hola,%20deseo%20información%20para%20agendar%20una%20cita%20odontológica." class="button whatsapp-button">
+      Enviar mensaje por WhatsApp
+    </a>
+  </div>
+</section>
 
-      <div class="hero-photo">
-        <img src="odontologa.png" alt="Odontóloga profesional de Odontología Pamela">
-      </div>
+</main>
 
-    </div>
-  </section>
+<section class="contact-footer">
+  <div class="contact-footer-grid">
+    <div class="contact-item"><span class="footer-icon">📍</span><strong>Quevedo, Los Ríos, Ecuador</strong>Atención con cita previa</div>
+    <div class="contact-item"><span class="footer-icon">💬</span><strong>+593 99 747 2927</strong>Escríbenos por WhatsApp</div>
+    <div class="contact-item"><span class="footer-icon">🕘</span><strong>Horario de atención</strong>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 9:00 - 13:00</div>
+  </div>
+</section>
 
-  <main>
+<a href="#inicio" class="home-float">Inicio</a>
+<a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica." class="whatsapp-float">WhatsApp</a>
 
-    <section id="nosotros">
-      <h2>Sobre Odontología Pamela</h2>
+<footer>
+  <h4>Aviso Legal</h4>
+  <p>Este sitio es informativo y no sustituye la valoración odontológica profesional.</p>
 
-      <div class="intro-box">
-        <p>
-          En Odontología Pamela brindamos atención dental integral en Quevedo,
-          priorizando la prevención, el diagnóstico oportuno y el cuidado estético
-          de la sonrisa.
-        </p>
+  <h4>Política de Privacidad</h4>
+  <p>No recopilamos información personal sin su consentimiento. Todos los datos se manejan de forma confidencial.</p>
 
-        <p>
-          Cada tratamiento se define según valoración odontológica personalizada,
-          con atención profesional, responsable y orientada al bienestar del paciente.
-        </p>
-      </div>
-    </section>
+  <h4>Política de Cookies</h4>
+  <p>Este sitio puede utilizar cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas su uso.</p>
 
-    <section id="servicios">
-      <h2>Servicios Odontológicos</h2>
-
-      <div class="intro-box">
-        <p>
-          Odontología general, estética dental, ortodoncia, rehabilitación oral,
-          odontología preventiva y atención familiar.
-        </p>
-      </div>
-    </section>
-
-    <section id="confianza">
-      <h2>Confianza y cuidado</h2>
-
-      <div class="intro-box">
-        <p>
-          Atención profesional, bioseguridad, cuidado integral y orientación personalizada
-          para cada paciente.
-        </p>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <h2>Contacto</h2>
-
-      <div class="intro-box">
-        <p>
-          Para agendar una cita o recibir información general, contáctanos vía WhatsApp.
-        </p>
-
-        <p>
-          <strong>Ubicación:</strong> Quevedo, Los Ríos, Ecuador. Atención con cita previa.
-        </p>
-
-        <p>
-          <strong>WhatsApp:</strong> +593 99 747 2927
-        </p>
-
-        <a href="https://wa.me/593997472927?text=Hola,%20deseo%20información%20para%20agendar%20una%20cita%20odontológica."
-           class="button whatsapp-button">
-          Enviar mensaje por WhatsApp
-        </a>
-      </div>
-    </section>
-
-  </main>
-
-  <a href="#inicio" class="home-float">Inicio</a>
-
-  <a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
-     class="whatsapp-float">
-    WhatsApp
-  </a>
+  <p>&copy; 2026 Odontología Pamela. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
