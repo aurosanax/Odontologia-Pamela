@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./logotipo.png?v=20">
-  <link rel="shortcut icon" type="image/png" href="./logotipo.png?v=20">
-  <link rel="apple-touch-icon" href="./logotipo.png?v=20">
+  <link rel="icon" type="image/png" sizes="32x32" href="./logotipo.png?v=30">
+  <link rel="shortcut icon" type="image/png" href="./logotipo.png?v=30">
+  <link rel="apple-touch-icon" href="./logotipo.png?v=30">
 
   <title>Odontología Pamela | Consultorio Dental en Quevedo</title>
 
   <meta name="description" content="Odontología Pamela, consultorio odontológico en Quevedo. Atención dental profesional, estética dental, limpieza, ortodoncia, rehabilitación oral e implantes con cita previa.">
+  <meta name="keywords" content="odontología en Quevedo, dentista en Quevedo, clínica dental Quevedo, estética dental, limpieza dental, ortodoncia, implantes dentales, odontología familiar">
+  <meta name="author" content="Odontología Pamela">
 
   <style>
     :root {
@@ -24,29 +26,31 @@
       --whatsapp-oscuro:#128C7E;
     }
 
-    *{ box-sizing:border-box; }
+    * {
+      box-sizing:border-box;
+    }
 
-    body{
-      font-family:Arial,sans-serif;
+    body {
+      font-family:Arial, sans-serif;
       margin:0;
-      background:#fff;
+      background:#ffffff;
       color:var(--texto);
       line-height:1.6;
     }
 
-    .top-logo{
+    .top-logo {
       text-align:center;
       padding:18px 15px 10px;
-      background:#fff;
+      background:#ffffff;
     }
 
-    .top-logo img{
+    .top-logo img {
       max-width:430px;
       width:88%;
       height:auto;
     }
 
-    nav{
+    nav {
       background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
       text-align:center;
       padding:12px 5px;
@@ -55,7 +59,7 @@
       z-index:100;
     }
 
-    nav a{
+    nav a {
       color:#fff;
       text-decoration:none;
       margin:0 12px;
@@ -63,17 +67,23 @@
       padding:8px 14px;
       border-radius:22px;
       display:inline-block;
+      transition:all 0.25s ease;
       font-size:0.95rem;
     }
 
-    .social-bar{
+    nav a:hover {
+      background:rgba(255,255,255,0.22);
+      transform:translateY(-1px);
+    }
+
+    .social-bar {
       background:#f2fcff;
       text-align:center;
       padding:12px 8px;
       border-bottom:1px solid var(--borde-azul);
     }
 
-    .social-bar a{
+    .social-bar a {
       display:inline-flex;
       align-items:center;
       gap:8px;
@@ -84,20 +94,25 @@
       font-size:0.95rem;
     }
 
-    .social-bar img{
+    .social-bar img {
       width:30px;
       height:30px;
       object-fit:contain;
-      background:#fff;
+      background:#ffffff;
       border-radius:50%;
       padding:4px;
       border:1px solid var(--borde-azul);
       box-shadow:0 3px 10px rgba(0,119,182,0.12);
     }
 
-    .hero{
+    .hero {
       background:
-        linear-gradient(90deg,rgba(255,255,255,0.82) 0%,rgba(255,255,255,0.68) 42%,rgba(255,255,255,0.08) 100%),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.82) 0%,
+          rgba(255,255,255,0.68) 42%,
+          rgba(255,255,255,0.08) 100%
+        ),
         url('banner.jpeg');
       background-size:cover;
       background-position:center;
@@ -105,7 +120,7 @@
       border-bottom:1px solid var(--borde-azul);
     }
 
-    .hero-content{
+    .hero-content {
       max-width:1350px;
       margin:auto;
       min-height:520px;
@@ -117,11 +132,11 @@
       overflow:hidden;
     }
 
-    .hero-text{
+    .hero-text {
       padding-bottom:85px;
     }
 
-    .hero-text h1{
+    .hero-text h1 {
       color:var(--azul-oscuro);
       font-size:2.75rem;
       line-height:1.1;
@@ -129,26 +144,30 @@
       max-width:600px;
     }
 
-    .hero-text h1 span{
+    .hero-text h1 span {
       color:var(--azul-claro);
       display:block;
     }
 
-    .hero-text p{
+    .hero-text p {
       color:#1f3d5a;
       font-size:1.08rem;
       max-width:560px;
       margin-bottom:22px;
     }
 
-    .hero-photo{
+    .hero-photo {
       display:flex;
       justify-content:center;
       align-items:flex-end;
       height:100%;
     }
 
-    .hero-photo img{
+    .doctor-container {
+      text-align:center;
+    }
+
+    .hero-photo img {
       max-width:580px;
       width:100%;
       height:auto;
@@ -160,7 +179,28 @@
       filter:drop-shadow(0 18px 35px rgba(0,62,138,0.20));
     }
 
-    .button{
+    .doctor-profile {
+      text-align:center;
+      margin-top:12px;
+      margin-bottom:14px;
+    }
+
+    .doctor-name {
+      color:var(--azul-oscuro);
+      font-size:1.35rem;
+      font-weight:700;
+      line-height:1.1;
+    }
+
+    .doctor-specialty {
+      color:#3f6f8f;
+      font-size:1rem;
+      margin-top:4px;
+      font-weight:600;
+      letter-spacing:0.3px;
+    }
+
+    .button {
       display:inline-block;
       color:#fff;
       padding:13px 24px;
@@ -168,28 +208,35 @@
       text-decoration:none;
       font-weight:bold;
       margin-top:8px;
+      transition:all 0.25s ease;
     }
 
-    .whatsapp-button{
+    .button:hover {
+      transform:translateY(-2px);
+    }
+
+    .whatsapp-button {
       background:linear-gradient(90deg,var(--whatsapp-oscuro),var(--whatsapp));
       box-shadow:0 5px 14px rgba(37,211,102,0.32);
     }
 
-    main{
+    main {
       max-width:1120px;
       margin:auto;
       padding:28px 18px;
     }
 
-    section{ margin-bottom:42px; }
+    section {
+      margin-bottom:42px;
+    }
 
-    h2{
+    h2 {
       color:var(--azul-oscuro);
       border-bottom:2px solid var(--azul);
       padding-bottom:6px;
     }
 
-    .section-title{
+    .section-title {
       text-align:center;
       color:var(--azul-oscuro);
       font-size:1.45rem;
@@ -198,7 +245,7 @@
     }
 
     .section-title::before,
-    .section-title::after{
+    .section-title::after {
       content:"";
       display:inline-block;
       width:130px;
@@ -208,51 +255,58 @@
       margin:0 18px;
     }
 
-    .intro-box{
-      background:linear-gradient(180deg,#fff,var(--turquesa-suave));
+    .intro-box {
+      background:linear-gradient(180deg,#ffffff,var(--turquesa-suave));
       border:1px solid var(--borde-azul);
       border-radius:18px;
       padding:24px;
       box-shadow:0 8px 22px rgba(0,119,182,0.10);
     }
 
-    .services-grid{
+    .services-grid {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(155px,1fr));
       gap:16px;
       margin-top:18px;
     }
 
-    .card{
-      background:#fff;
+    .card {
+      background:#ffffff;
       border:1px solid #e3f3f8;
       border-radius:15px;
       padding:18px 12px;
       box-shadow:0 5px 16px rgba(0,0,0,0.06);
+      transition:all 0.25s ease;
       text-align:center;
       min-height:210px;
     }
 
-    .icon{
+    .card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 10px 24px rgba(0,119,182,0.14);
+      border-color:var(--azul-claro);
+    }
+
+    .icon {
       font-size:2.3rem;
       color:var(--azul-claro);
       margin-bottom:8px;
     }
 
-    .card h3{
+    .card h3 {
       color:var(--azul-oscuro);
       margin:4px 0 8px;
       font-size:1rem;
       text-transform:uppercase;
     }
 
-    .card p{
+    .card p {
       font-size:0.88rem;
       margin:0;
       color:#334;
     }
 
-    .notice{
+    .notice {
       background:var(--turquesa-suave);
       border-left:5px solid var(--azul);
       padding:1rem;
@@ -260,7 +314,7 @@
       margin-top:1.5rem;
     }
 
-    .trust-grid{
+    .trust-grid {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
       background:#e9fbff;
@@ -270,61 +324,70 @@
       box-shadow:0 8px 22px rgba(0,119,182,0.10);
     }
 
-    .trust-card{
+    .trust-card {
       padding:20px;
       display:grid;
       grid-template-columns:45px 1fr;
       gap:12px;
       border-right:1px solid var(--borde-azul);
+      align-items:start;
     }
 
-    .trust-card:last-child{ border-right:none; }
+    .trust-card:last-child {
+      border-right:none;
+    }
 
-    .trust-card h3{
+    .trust-card .icon {
+      font-size:2rem;
+      margin:0;
+    }
+
+    .trust-card h3 {
       margin:0 0 4px;
       color:var(--azul-oscuro);
       font-size:0.98rem;
       text-transform:uppercase;
     }
 
-    .trust-card p{
+    .trust-card p {
       margin:0;
       font-size:0.88rem;
     }
 
-    .contact-footer{
+    .contact-footer {
       background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
       color:white;
       padding:26px 18px;
       margin-top:20px;
     }
 
-    .contact-footer-grid{
+    .contact-footer-grid {
       max-width:1100px;
       margin:auto;
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
       gap:18px;
+      align-items:center;
       text-align:center;
     }
 
-    .contact-item strong{
+    .contact-item strong {
       display:block;
       font-size:1.05rem;
     }
 
-    .footer-icon{
+    .footer-icon {
       font-size:2rem;
       display:block;
       margin-bottom:6px;
     }
 
-    .whatsapp-float{
+    .whatsapp-float {
       position:fixed;
       right:18px;
       bottom:18px;
       background:linear-gradient(90deg,var(--whatsapp-oscuro),var(--whatsapp));
-      color:#fff;
+      color:white;
       padding:13px 18px;
       border-radius:50px;
       text-decoration:none;
@@ -333,11 +396,11 @@
       z-index:999;
     }
 
-    .home-float{
+    .home-float {
       position:fixed;
       left:18px;
       bottom:18px;
-      background:#fff;
+      background:#ffffff;
       color:var(--azul-oscuro);
       padding:13px 18px;
       border-radius:50px;
@@ -348,7 +411,7 @@
       z-index:999;
     }
 
-    footer{
+    footer {
       background:#f4f4f4;
       text-align:center;
       font-size:0.9rem;
@@ -356,58 +419,62 @@
       color:#555;
     }
 
-    footer h4{
+    footer h4 {
       color:var(--azul-oscuro);
       margin-top:1.5rem;
     }
 
-    @media(max-width:800px){
-      .top-logo{
+    @media(max-width:800px) {
+      .top-logo {
         padding:2px 10px 2px;
       }
 
-      .top-logo img{
-        max-width:180px;
-        width:62%;
+      .top-logo img {
+        max-width:290px;
+        width:90%;
         height:auto;
       }
 
-      .hero{
+      .hero {
         background:
-          linear-gradient(180deg,rgba(255,255,255,0.96),rgba(233,251,255,0.88)),
+          linear-gradient(
+            180deg,
+            rgba(255,255,255,0.96),
+            rgba(233,251,255,0.88)
+          ),
           url('bannermovil.jpeg');
         background-size:cover;
         background-position:center;
       }
 
-      .hero-content{
+      .hero-content {
         grid-template-columns:1fr;
         min-height:auto;
         padding:28px 18px 0;
         text-align:center;
       }
 
-      .hero-text{
+      .hero-text {
         padding-bottom:0;
       }
 
-      .hero-text h1{
+      .hero-text h1 {
         font-size:1.8rem;
         margin:auto auto 14px;
       }
 
-      .hero-text p{
+      .hero-text p {
         font-size:0.98rem;
         margin-left:auto;
         margin-right:auto;
       }
 
-      .hero-photo{
+      .hero-photo {
         margin-top:20px;
         align-items:flex-end;
       }
 
-      .hero-photo img{
+      .hero-photo img {
         max-width:320px;
         width:100%;
         height:auto;
@@ -416,34 +483,47 @@
         filter:drop-shadow(0 12px 22px rgba(0,62,138,0.18));
       }
 
-      nav a{
+      .doctor-profile {
+        margin-top:8px;
+        margin-bottom:10px;
+      }
+
+      .doctor-name {
+        font-size:1.15rem;
+      }
+
+      .doctor-specialty {
+        font-size:0.92rem;
+      }
+
+      nav a {
         margin:4px 4px;
         font-size:0.85rem;
         padding:7px 10px;
       }
 
-      .social-bar a{
+      .social-bar a {
         margin:5px 8px;
         font-size:0.85rem;
       }
 
       .section-title::before,
-      .section-title::after{
+      .section-title::after {
         width:45px;
         margin:0 8px;
       }
 
-      .trust-card{
+      .trust-card {
         border-right:none;
         border-bottom:1px solid var(--borde-azul);
       }
 
-      .trust-card:last-child{
+      .trust-card:last-child {
         border-bottom:none;
       }
 
       .whatsapp-float,
-      .home-float{
+      .home-float {
         font-size:0.8rem;
         padding:10px 12px;
       }
@@ -453,125 +533,251 @@
 
 <body>
 
-<header id="inicio" class="top-logo">
-  <img src="logotipo.png" alt="Logotipo de Odontología Pamela">
-</header>
+  <header id="inicio" class="top-logo">
+    <img src="logotipo.png" alt="Logotipo de Odontología Pamela">
+  </header>
 
-<nav>
-  <a href="#inicio">INICIO</a>
-  <a href="#nosotros">NOSOTROS</a>
-  <a href="#servicios">SERVICIOS</a>
-  <a href="#confianza">CONFIANZA</a>
-  <a href="#contacto">CONTACTO</a>
-</nav>
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#nosotros">NOSOTROS</a>
+    <a href="#servicios">SERVICIOS</a>
+    <a href="#confianza">CONFIANZA</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
 
-<div class="social-bar">
-  <a href="#"><img src="ubicacion.png" alt="Ubicación">Ubicación</a>
-  <a href="#"><img src="instagram.png" alt="Instagram">Instagram</a>
-  <a href="#"><img src="facebook.png" alt="Facebook">Facebook</a>
-  <a href="#"><img src="tiktok.png" alt="TikTok">TikTok</a>
-</div>
+  <div class="social-bar">
+    <a href="#" aria-label="Ubicación">
+      <img src="ubicacion.png" alt="Ubicación">
+      Ubicación
+    </a>
 
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>
-        Sonrisas saludables y
-        <span>estética dental profesional</span>
-        en Quevedo
-      </h1>
+    <a href="#" aria-label="Instagram">
+      <img src="instagram.png" alt="Instagram">
+      Instagram
+    </a>
 
-      <p>
-        Atención odontológica integral para el cuidado de tu sonrisa, con enfoque preventivo,
-        estético y personalizado. Atendemos con cita previa en la ciudad de Quevedo.
-      </p>
+    <a href="#" aria-label="Facebook">
+      <img src="facebook.png" alt="Facebook">
+      Facebook
+    </a>
 
-      <a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica." class="button whatsapp-button">
-        Agendar cita por WhatsApp
-      </a>
-    </div>
-
-    <div class="hero-photo">
-      <img src="odontologa.png" alt="Odontóloga profesional de Odontología Pamela">
-    </div>
-  </div>
-</section>
-
-<main>
-
-<section id="nosotros">
-  <h2>Sobre Odontología Pamela</h2>
-  <div class="intro-box">
-    <p>En Odontología Pamela brindamos atención dental integral en Quevedo, priorizando la prevención, el diagnóstico oportuno y el cuidado estético de la sonrisa.</p>
-    <p>Cada tratamiento se define según valoración odontológica personalizada, con atención profesional, responsable y orientada al bienestar del paciente.</p>
-  </div>
-</section>
-
-<section id="servicios">
-  <div class="section-title">🦷 NUESTROS SERVICIOS</div>
-
-  <div class="services-grid">
-    <div class="card"><div class="icon">🔎</div><h3>Odontología General</h3><p>Consulta, diagnóstico, limpieza dental profesional y control preventivo.</p></div>
-    <div class="card"><div class="icon">✨</div><h3>Estética Dental</h3><p>Diseño de sonrisa, blanqueamiento, carillas y armonización estética.</p></div>
-    <div class="card"><div class="icon">🦷</div><h3>Ortodoncia</h3><p>Valoración para brackets, ortodoncia convencional y seguimiento.</p></div>
-    <div class="card"><div class="icon">⚙️</div><h3>Rehabilitación Oral</h3><p>Coronas, puentes, prótesis removibles e implantes según valoración.</p></div>
-    <div class="card"><div class="icon">🛡️</div><h3>Odontología Preventiva</h3><p>Profilaxis, aplicación de flúor, sellantes y educación en higiene oral.</p></div>
-    <div class="card"><div class="icon">👨‍👩‍👧</div><h3>Atención Familiar</h3><p>Atención para adultos, orientación para niños y control familiar.</p></div>
-  </div>
-
-  <div class="notice">
-    Todo tratamiento odontológico se define únicamente después de una valoración profesional personalizada.
-  </div>
-</section>
-
-<section id="confianza">
-  <div class="section-title">CONFIANZA Y CUIDADO</div>
-
-  <div class="trust-grid">
-    <div class="trust-card"><div class="icon">👩‍⚕️</div><div><h3>Atención profesional</h3><p>Evaluación personalizada y orientación según las necesidades del paciente.</p></div></div>
-    <div class="trust-card"><div class="icon">🦷</div><div><h3>Equipo moderno</h3><p>Imagen clínica actual, ordenada y enfocada en atención odontológica integral.</p></div></div>
-    <div class="trust-card"><div class="icon">🛡️</div><div><h3>Bioseguridad</h3><p>Atención responsable, higiene y cuidado durante cada valoración.</p></div></div>
-    <div class="trust-card"><div class="icon">💙</div><div><h3>Cuidado integral</h3><p>Nos enfocamos en la salud bucal, estética y bienestar general del paciente.</p></div></div>
-  </div>
-</section>
-
-<section id="contacto">
-  <h2>Contacto</h2>
-  <div class="intro-box">
-    <p>Para agendar una cita o recibir información general, contáctanos vía WhatsApp.</p>
-    <p><strong>Ubicación:</strong> Quevedo, Los Ríos, Ecuador. Atención con cita previa.</p>
-    <p><strong>WhatsApp:</strong> +593 99 747 2927</p>
-    <a href="https://wa.me/593997472927?text=Hola,%20deseo%20información%20para%20agendar%20una%20cita%20odontológica." class="button whatsapp-button">
-      Enviar mensaje por WhatsApp
+    <a href="#" aria-label="TikTok">
+      <img src="tiktok.png" alt="TikTok">
+      TikTok
     </a>
   </div>
-</section>
 
-</main>
+  <section class="hero">
+    <div class="hero-content">
 
-<section class="contact-footer">
-  <div class="contact-footer-grid">
-    <div class="contact-item"><span class="footer-icon">📍</span><strong>Quevedo, Los Ríos, Ecuador</strong>Atención con cita previa</div>
-    <div class="contact-item"><span class="footer-icon">💬</span><strong>+593 99 747 2927</strong>Escríbenos por WhatsApp</div>
-    <div class="contact-item"><span class="footer-icon">🕘</span><strong>Horario de atención</strong>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 9:00 - 13:00</div>
-  </div>
-</section>
+      <div class="hero-text">
+        <h1>
+          Sonrisas saludables y
+          <span>estética dental profesional</span>
+          en Quevedo
+        </h1>
 
-<a href="#inicio" class="home-float">Inicio</a>
-<a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica." class="whatsapp-float">WhatsApp</a>
+        <p>
+          Atención odontológica integral para el cuidado de tu sonrisa, con enfoque preventivo,
+          estético y personalizado. Atendemos con cita previa en la ciudad de Quevedo.
+        </p>
 
-<footer>
-  <h4>Aviso Legal</h4>
-  <p>Este sitio es informativo y no sustituye la valoración odontológica profesional.</p>
+        <a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
+           class="button whatsapp-button">
+          Agendar cita por WhatsApp
+        </a>
+      </div>
 
-  <h4>Política de Privacidad</h4>
-  <p>No recopilamos información personal sin su consentimiento. Todos los datos se manejan de forma confidencial.</p>
+      <div class="hero-photo">
+        <div class="doctor-container">
+          <img src="odontologa.png" alt="Odontóloga profesional de Odontología Pamela">
 
-  <h4>Política de Cookies</h4>
-  <p>Este sitio puede utilizar cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas su uso.</p>
+          <div class="doctor-profile">
+            <div class="doctor-name">Dra. Pamela</div>
+            <div class="doctor-specialty">Especialista en Odontología</div>
+          </div>
+        </div>
+      </div>
 
-  <p>&copy; 2026 Odontología Pamela. Todos los derechos reservados.</p>
-</footer>
+    </div>
+  </section>
+
+  <main>
+
+    <section id="nosotros">
+      <h2>Sobre Odontología Pamela</h2>
+
+      <div class="intro-box">
+        <p>
+          En Odontología Pamela brindamos atención dental integral en Quevedo,
+          priorizando la prevención, el diagnóstico oportuno y el cuidado estético
+          de la sonrisa.
+        </p>
+
+        <p>
+          Cada tratamiento se define según valoración odontológica personalizada,
+          con atención profesional, responsable y orientada al bienestar del paciente.
+        </p>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="section-title">🦷 NUESTROS SERVICIOS</div>
+
+      <div class="services-grid">
+
+        <div class="card">
+          <div class="icon">🔎</div>
+          <h3>Odontología General</h3>
+          <p>Consulta, diagnóstico, limpieza dental profesional y control preventivo.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">✨</div>
+          <h3>Estética Dental</h3>
+          <p>Diseño de sonrisa, blanqueamiento, carillas y armonización estética.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🦷</div>
+          <h3>Ortodoncia</h3>
+          <p>Valoración para brackets, ortodoncia convencional y seguimiento.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚙️</div>
+          <h3>Rehabilitación Oral</h3>
+          <p>Coronas, puentes, prótesis removibles e implantes según valoración.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🛡️</div>
+          <h3>Odontología Preventiva</h3>
+          <p>Profilaxis, aplicación de flúor, sellantes y educación en higiene oral.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">👨‍👩‍👧</div>
+          <h3>Atención Familiar</h3>
+          <p>Atención para adultos, orientación para niños y control familiar.</p>
+        </div>
+
+      </div>
+
+      <div class="notice">
+        Todo tratamiento odontológico se define únicamente después de una valoración profesional personalizada.
+      </div>
+    </section>
+
+    <section id="confianza">
+      <div class="section-title">CONFIANZA Y CUIDADO</div>
+
+      <div class="trust-grid">
+
+        <div class="trust-card">
+          <div class="icon">👩‍⚕️</div>
+          <div>
+            <h3>Atención profesional</h3>
+            <p>Evaluación personalizada y orientación según las necesidades del paciente.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="icon">🦷</div>
+          <div>
+            <h3>Equipo moderno</h3>
+            <p>Imagen clínica actual, ordenada y enfocada en atención odontológica integral.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="icon">🛡️</div>
+          <div>
+            <h3>Bioseguridad</h3>
+            <p>Atención responsable, higiene y cuidado durante cada valoración.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="icon">💙</div>
+          <div>
+            <h3>Cuidado integral</h3>
+            <p>Nos enfocamos en la salud bucal, estética y bienestar general del paciente.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+
+      <div class="intro-box">
+        <p>
+          Para agendar una cita o recibir información general, contáctanos vía WhatsApp.
+        </p>
+
+        <p>
+          <strong>Ubicación:</strong> Quevedo, Los Ríos, Ecuador. Atención con cita previa.
+        </p>
+
+        <p>
+          <strong>WhatsApp:</strong> +593 99 747 2927
+        </p>
+
+        <a href="https://wa.me/593997472927?text=Hola,%20deseo%20información%20para%20agendar%20una%20cita%20odontológica."
+           class="button whatsapp-button">
+          Enviar mensaje por WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="contact-footer">
+    <div class="contact-footer-grid">
+
+      <div class="contact-item">
+        <span class="footer-icon">📍</span>
+        <strong>Quevedo, Los Ríos, Ecuador</strong>
+        Atención con cita previa
+      </div>
+
+      <div class="contact-item">
+        <span class="footer-icon">💬</span>
+        <strong>+593 99 747 2927</strong>
+        Escríbenos por WhatsApp
+      </div>
+
+      <div class="contact-item">
+        <span class="footer-icon">🕘</span>
+        <strong>Horario de atención</strong>
+        Lunes a Viernes: 9:00 - 18:00<br>
+        Sábados: 9:00 - 13:00
+      </div>
+
+    </div>
+  </section>
+
+  <a href="#inicio" class="home-float">Inicio</a>
+
+  <a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
+     class="whatsapp-float">
+    WhatsApp
+  </a>
+
+  <footer>
+    <h4>Aviso Legal</h4>
+    <p>Este sitio es informativo y no sustituye la valoración odontológica profesional.</p>
+
+    <h4>Política de Privacidad</h4>
+    <p>No recopilamos información personal sin su consentimiento. Todos los datos se manejan de forma confidencial.</p>
+
+    <h4>Política de Cookies</h4>
+    <p>Este sitio puede utilizar cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas su uso.</p>
+
+    <p>&copy; 2026 Odontología Pamela. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
