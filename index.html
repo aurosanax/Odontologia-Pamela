@@ -165,6 +165,8 @@
 
     .doctor-container {
       text-align:center;
+      position:relative;
+      padding-bottom:75px;
     }
 
     .hero-photo img {
@@ -179,25 +181,49 @@
       filter:drop-shadow(0 18px 35px rgba(0,62,138,0.20));
     }
 
-    .doctor-profile {
-      text-align:center;
-      margin-top:12px;
-      margin-bottom:14px;
+    .doctor-floating-card {
+      position:absolute;
+      bottom:10px;
+      left:50%;
+      transform:translateX(-50%);
+      background:#ffffff;
+      border-radius:18px;
+      padding:14px 20px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.14);
+      z-index:20;
+      min-width:280px;
     }
 
-    .doctor-name {
-      color:var(--azul-oscuro);
-      font-size:1.35rem;
+    .doctor-floating-icon {
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      background:linear-gradient(90deg,#023e8a,#00b4d8);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:1.3rem;
+      flex-shrink:0;
+    }
+
+    .doctor-floating-name {
+      color:#023e8a;
+      font-size:1.12rem;
       font-weight:700;
       line-height:1.1;
+      text-align:left;
     }
 
-    .doctor-specialty {
-      color:#3f6f8f;
-      font-size:1rem;
+    .doctor-floating-specialty {
+      color:#4c6272;
+      font-size:0.88rem;
       margin-top:4px;
       font-weight:600;
-      letter-spacing:0.3px;
+      text-align:left;
     }
 
     .button {
@@ -483,17 +509,28 @@
         filter:drop-shadow(0 12px 22px rgba(0,62,138,0.18));
       }
 
-      .doctor-profile {
-        margin-top:8px;
-        margin-bottom:10px;
+      .doctor-container {
+        padding-bottom:75px;
       }
 
-      .doctor-name {
+      .doctor-floating-card {
+        bottom:8px;
+        min-width:240px;
+        padding:12px 16px;
+      }
+
+      .doctor-floating-icon {
+        width:46px;
+        height:46px;
         font-size:1.15rem;
       }
 
-      .doctor-specialty {
-        font-size:0.92rem;
+      .doctor-floating-name {
+        font-size:1rem;
+      }
+
+      .doctor-floating-specialty {
+        font-size:0.82rem;
       }
 
       nav a {
@@ -592,9 +629,13 @@
         <div class="doctor-container">
           <img src="odontologa.png" alt="Odontóloga profesional de Odontología Pamela">
 
-          <div class="doctor-profile">
-            <div class="doctor-name">Dra. Pamela</div>
-            <div class="doctor-specialty">Especialista en Odontología</div>
+          <div class="doctor-floating-card">
+            <div class="doctor-floating-icon">🦷</div>
+
+            <div>
+              <div class="doctor-floating-name">Dra. Pamela</div>
+              <div class="doctor-floating-specialty">Especialista en Odontología</div>
+            </div>
           </div>
         </div>
       </div>
