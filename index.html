@@ -40,13 +40,13 @@
 
     .top-logo {
       text-align:center;
-      padding:18px 15px 10px;
+      padding:6px 15px 0;
       background:#ffffff;
     }
 
     .top-logo img {
-      max-width:430px;
-      width:88%;
+      max-width:340px;
+      width:82%;
       height:auto;
     }
 
@@ -78,31 +78,37 @@
 
     .social-bar {
       background:#f2fcff;
-      text-align:center;
-      padding:12px 8px;
+      padding:18px 10px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:28px;
+      flex-wrap:wrap;
       border-bottom:1px solid var(--borde-azul);
     }
 
     .social-bar a {
-      display:inline-flex;
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      background:#ffffff;
+      display:flex;
+      justify-content:center;
       align-items:center;
-      gap:8px;
-      color:var(--azul-oscuro);
-      text-decoration:none;
-      font-weight:bold;
-      margin:5px 18px;
-      font-size:0.95rem;
+      border:2px solid #d9f4fb;
+      box-shadow:0 6px 18px rgba(0,119,182,0.12);
+      transition:all .25s ease;
+    }
+
+    .social-bar a:hover {
+      transform:translateY(-4px) scale(1.05);
+      box-shadow:0 10px 24px rgba(0,119,182,0.18);
     }
 
     .social-bar img {
-      width:30px;
-      height:30px;
+      width:46px;
+      height:46px;
       object-fit:contain;
-      background:#ffffff;
-      border-radius:50%;
-      padding:4px;
-      border:1px solid var(--borde-azul);
-      box-shadow:0 3px 10px rgba(0,119,182,0.12);
     }
 
     .hero {
@@ -471,12 +477,12 @@
 
     @media(max-width:800px) {
       .top-logo {
-        padding:2px 10px 2px;
+        padding:0 10px 0;
       }
 
       .top-logo img {
-        max-width:290px;
-        width:90%;
+        max-width:260px;
+        width:78%;
         height:auto;
       }
 
@@ -501,6 +507,21 @@
         font-size:0.76rem;
         white-space:nowrap;
         flex-shrink:0;
+      }
+
+      .social-bar {
+        gap:18px;
+        padding:14px 8px;
+      }
+
+      .social-bar a {
+        width:74px;
+        height:74px;
+      }
+
+      .social-bar img {
+        width:38px;
+        height:38px;
       }
 
       .hero {
@@ -576,11 +597,6 @@
         font-size:0.82rem;
       }
 
-      .social-bar a {
-        margin:5px 8px;
-        font-size:0.85rem;
-      }
-
       .section-title::before,
       .section-title::after {
         width:45px;
@@ -637,22 +653,18 @@
   <div class="social-bar">
     <a href="#" aria-label="Ubicación">
       <img src="ubicacion.png" alt="Ubicación">
-      Ubicación
     </a>
 
     <a href="#" aria-label="Instagram">
       <img src="instagram.png" alt="Instagram">
-      Instagram
     </a>
 
     <a href="#" aria-label="Facebook">
       <img src="facebook.png" alt="Facebook">
-      Facebook
     </a>
 
     <a href="#" aria-label="TikTok">
       <img src="tiktok.png" alt="TikTok">
-      TikTok
     </a>
   </div>
 
