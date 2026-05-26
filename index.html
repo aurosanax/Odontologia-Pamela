@@ -468,6 +468,26 @@
       color:var(--azul-oscuro);
       margin-top:1.5rem;
     }
+    .map-wrapper{
+  max-width:1100px;
+  margin:25px auto 35px;
+  padding:0 18px;
+}
+
+.map-container{
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 26px rgba(0,119,182,0.14);
+  border:1px solid var(--borde-azul);
+  background:#ffffff;
+}
+
+.map-container iframe{
+  width:100%;
+  height:340px;
+  border:0;
+  display:block;
+}
 
     @media(max-width:900px) {
       .services-grid {
@@ -864,6 +884,20 @@
 
     </div>
   </section>
+  <div class="map-wrapper">
+
+  <div class="map-container">
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1838979423537!2d-79.46257498917588!3d-1.0217768989640765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902b4de2ea502131%3A0x457eaf74b7255633!2sRECTIFICADORA%20DE%20MOTORES%20PALMA!5e0!3m2!1ses-419!2sec!4v1779832461928!5m2!1ses-419!2sec"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+  </div>
+
+</div>
 
   <a href="#inicio" class="home-float">Inicio</a>
 
