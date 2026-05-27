@@ -500,6 +500,58 @@
 .map-button span{
   font-size:1.15rem;
 }
+ .testimonials-section{
+  margin:50px 0;
+}
+
+.testimonials-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:28px;
+}
+
+.testimonial-card{
+  background:#ffffff;
+  border:1px solid #d9eef7;
+  border-radius:22px;
+  padding:28px 22px;
+  text-align:center;
+  box-shadow:0 10px 24px rgba(0,119,182,0.10);
+  transition:0.30s ease;
+}
+
+.testimonial-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(0,119,182,0.16);
+}
+
+.stars{
+  color:#f4b400;
+  font-size:1.35rem;
+  margin-bottom:14px;
+  letter-spacing:3px;
+}
+
+.testimonial-card p{
+  color:#444;
+  line-height:1.7;
+  font-size:0.96rem;
+  margin-bottom:18px;
+}
+
+.testimonial-card strong{
+  color:#0b4da2;
+  font-size:1rem;
+}
+
+@media(max-width:900px){
+
+  .testimonials-grid{
+    grid-template-columns:1fr;
+  }
+
+}     
   max-width:1100px;
   margin:25px auto 35px;
   padding:0 18px;
@@ -855,7 +907,41 @@
         Todo tratamiento odontológico se define únicamente después de una valoración profesional personalizada.
       </div>
     </section>
+<section class="testimonials-section">
 
+  <div class="section-title">
+    EXPERIENCIAS DE PACIENTES
+  </div>
+
+  <div class="testimonials-grid">
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>
+        Excelente atención y ambiente muy profesional.
+      </p>
+      <strong>— María G.</strong>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>
+        Muy amable y explicación clara durante la cita.
+      </p>
+      <strong>— Andrea P.</strong>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>
+        Me sentí cómoda y segura durante la atención.
+      </p>
+      <strong>— Daniela R.</strong>
+    </div>
+
+  </div>
+
+</section>
     <section id="confianza">
       <div class="section-title">CONFIANZA Y CUIDADO</div>
 
