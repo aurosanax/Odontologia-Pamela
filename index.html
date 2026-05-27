@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./logotipo.png?v=30">
-  <link rel="shortcut icon" type="image/png" href="./logotipo.png?v=30">  
-  <link rel="apple-touch-icon" href="./logotipo.png?v=30">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png?v=33">
+  <link rel="shortcut icon" type="image/png" href="./favicon.png?v=33">  
+  <link rel="apple-touch-icon" href="./favicon.png?v=33">
 
   <title>Odontología Pamela | Consultorio Dental en Quevedo</title>
 
@@ -359,6 +359,51 @@
       margin-top:1.5rem;
     }
 
+    .testimonials-section {
+      margin:42px 0;
+    }
+
+    .testimonials-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+      margin-top:24px;
+    }
+
+    .testimonial-card {
+      background:#ffffff;
+      border:1px solid var(--borde-azul);
+      border-radius:20px;
+      padding:26px 22px;
+      text-align:center;
+      box-shadow:0 8px 22px rgba(0,119,182,0.10);
+      transition:all 0.30s ease;
+    }
+
+    .testimonial-card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 14px 30px rgba(0,119,182,0.16);
+    }
+
+    .stars {
+      color:#f4b400;
+      font-size:1.35rem;
+      letter-spacing:3px;
+      margin-bottom:14px;
+    }
+
+    .testimonial-card p {
+      color:#334;
+      font-size:0.95rem;
+      line-height:1.6;
+      margin:0 0 16px;
+    }
+
+    .testimonial-card strong {
+      color:var(--azul-oscuro);
+      font-size:0.95rem;
+    }
+
     .trust-grid {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
@@ -469,9 +514,66 @@
       margin-top:1.5rem;
     }
 
+    .map-wrapper {
+      max-width:1100px;
+      margin:25px auto 20px;
+      padding:0 18px;
+    }
+
+    .map-container {
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 10px 26px rgba(0,119,182,0.14);
+      border:1px solid var(--borde-azul);
+      background:#ffffff;
+    }
+
+    .map-container iframe {
+      width:100%;
+      height:340px;
+      border:0;
+      display:block;
+    }
+
+    .map-button-container {
+      text-align:center;
+      margin-top:0;
+      margin-bottom:38px;
+    }
+
+    .map-button {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:linear-gradient(90deg,#023e8a,#0077b6,#00b4d8);
+      color:#ffffff;
+      text-decoration:none;
+      padding:16px 34px;
+      border-radius:50px;
+      font-weight:700;
+      font-size:1rem;
+      letter-spacing:0.3px;
+      box-shadow:0 10px 26px rgba(0,119,182,0.25);
+      transition:all 0.30s ease;
+      border:1px solid rgba(255,255,255,0.22);
+    }
+
+    .map-button:hover {
+      transform:translateY(-3px) scale(1.02);
+      box-shadow:0 14px 32px rgba(0,119,182,0.35);
+    }
+
+    .map-button span {
+      font-size:1.15rem;
+    }
+
     @media(max-width:900px) {
       .services-grid {
         grid-template-columns:repeat(2,1fr);
+      }
+
+      .testimonials-grid {
+        grid-template-columns:1fr;
       }
     }
 
@@ -617,6 +719,10 @@
         font-size:0.8rem;
         padding:10px 12px;
       }
+
+      .map-container iframe {
+        height:280px;
+      }
     }
 
     @media(max-width:560px) {
@@ -631,6 +737,14 @@
 
       .card {
         min-height:auto;
+      }
+
+      .testimonial-card {
+        padding:24px 18px;
+      }
+
+      .map-container iframe {
+        height:260px;
       }
     }
   </style>
@@ -775,6 +889,32 @@
       </div>
     </section>
 
+    <section class="testimonials-section">
+      <div class="section-title">EXPERIENCIAS DE PACIENTES</div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>Excelente atención y ambiente muy profesional.</p>
+          <strong>— María G.</strong>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>Muy amable y explicación clara durante la cita.</p>
+          <strong>— Andrea P.</strong>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>Me sentí cómoda y segura durante la atención.</p>
+          <strong>— Daniela R.</strong>
+        </div>
+
+      </div>
+    </section>
+
     <section id="confianza">
       <div class="section-title">CONFIANZA Y CUIDADO</div>
 
@@ -865,6 +1005,26 @@
     </div>
   </section>
 
+  <div class="map-wrapper">
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1838979423537!2d-79.46257498917588!3d-1.0217768989640765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902b4de2ea502131%3A0x457eaf74b7255633!2sRECTIFICADORA%20DE%20MOTORES%20PALMA!5e0!3m2!1ses-419!2sec!4v1779832461928!5m2!1ses-419!2sec"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="map-button-container">
+    <a href="https://maps.google.com/?q=RECTIFICADORA+DE+MOTORES+PALMA"
+       target="_blank"
+       class="map-button">
+       <span>📍</span>
+       Cómo llegar con GPS
+    </a>
+  </div>
+
   <a href="#inicio" class="home-float">Inicio</a>
 
   <a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
@@ -887,3 +1047,4 @@
 
 </body>
 </html>
+
