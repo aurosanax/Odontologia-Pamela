@@ -1,212 +1,636 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> 
+<html lang="es">       
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./logotipo.png?v=30">
+  <link rel="shortcut icon" type="image/png" href="./logotipo.png?v=30">  
+  <link rel="apple-touch-icon" href="./logotipo.png?v=30">
 
-  <title>Salud Femenina Integral en Guayaquil | AUROSANAX</title>
-  <meta name="description" content="AUROSANAX, consultorio médico especializado en ginecología y salud femenina en Guayaquil, Ecuador. Atención profesional con cita previa.">
+  <title>Odontología Pamela | Consultorio Dental en Quevedo</title>
+
+  <meta name="description" content="Odontología Pamela, consultorio odontológico en Quevedo. Atención dental profesional, estética dental, limpieza, ortodoncia, rehabilitación oral e implantes con cita previa.">
+  <meta name="keywords" content="odontología en Quevedo, dentista en Quevedo, clínica dental Quevedo, estética dental, limpieza dental, ortodoncia, implantes dentales, odontología familiar">
+  <meta name="author" content="Odontología Pamela">
 
   <style>
     :root {
-      --fucsia: #d63384;
-      --fucsia-claro: #f06292;
-      --fucsia-oscuro: #b8206f;
-      --rosado-suave: #fff0f7;
-      --borde-rosado: #f4c7dc;
-      --texto: #333333;
+      --azul:#0077b6;
+      --azul-claro:#00b4d8;
+      --azul-oscuro:#023e8a;
+      --turquesa-suave:#e9fbff;
+      --borde-azul:#bdeef7;
+      --texto:#333333;
+      --whatsapp:#25D366;
+      --whatsapp-oscuro:#128C7E;
+    }
+
+    * {
+      box-sizing:border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: var(--texto);
-      line-height: 1.6;
+      font-family:Arial, sans-serif;
+      margin:0;
+      background:#ffffff;
+      color:var(--texto);
+      line-height:1.6;
     }
 
-    header {
-      text-align: center;
-      padding: 1.8rem 1rem 1rem;
-      background: linear-gradient(180deg, var(--rosado-suave), #ffffff);
+    .top-logo {
+      text-align:center;
+      padding:6px 15px 0;
+      background:#ffffff;
     }
 
-    header img {
-      width: 125px;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      color: var(--fucsia-oscuro);
-      font-weight: bold;
-      margin: 0;
+    .top-logo img {
+      max-width:340px;
+      width:82%;
+      height:auto;
     }
 
     nav {
-      background: linear-gradient(90deg, var(--fucsia-oscuro), var(--fucsia), var(--fucsia-claro));
-      text-align: center;
-      padding: 12px 5px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
+      text-align:center;
+      padding:12px 5px;
+      position:sticky;
+      top:0;
+      z-index:100;
     }
 
     nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 14px;
-      font-weight: bold;
+      color:#fff;
+      text-decoration:none;
+      margin:0 12px;
+      font-weight:bold;
+      padding:8px 14px;
+      border-radius:22px;
+      display:inline-block;
+      transition:all 0.25s ease;
+      font-size:0.95rem;
+    }
+
+    nav a:hover {
+      background:rgba(255,255,255,0.22);
+      transform:translateY(-1px);
+    }
+
+    .social-bar {
+      background:#f2fcff;
+      padding:18px 10px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:28px;
+      flex-wrap:wrap;
+      border-bottom:1px solid var(--borde-azul);
+    }
+
+    .social-bar a {
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      background:#ffffff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      border:2px solid #d9f4fb;
+      box-shadow:0 6px 18px rgba(0,119,182,0.12);
+      transition:all .25s ease;
+    }
+
+    .social-bar a:hover {
+      transform:translateY(-4px) scale(1.05);
+      box-shadow:0 10px 24px rgba(0,119,182,0.18);
+    }
+
+    .social-bar img {
+      width:58px;
+      height:58px;
+      object-fit:contain;
     }
 
     .hero {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-      text-align: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.82) 0%,
+          rgba(255,255,255,0.68) 42%,
+          rgba(255,255,255,0.08) 100%
+        ),
+        url('banner.jpeg');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      border-bottom:1px solid var(--borde-azul);
     }
 
-    .hero-box {
-      background: linear-gradient(180deg, #fff7fb, var(--rosado-suave));
-      border-radius: 18px;
-      padding: 2.5rem 1.5rem;
-      box-shadow: 0 8px 25px rgba(214, 51, 132, 0.14);
-      border: 1px solid var(--borde-rosado);
+    .hero-content {
+      max-width:1350px;
+      margin:auto;
+      min-height:520px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:end;
+      gap:0;
+      padding:20px 50px 0;
+      overflow:hidden;
     }
 
-    h1 {
-      color: var(--fucsia-oscuro);
-      font-size: 2rem;
-      margin-bottom: 0.7rem;
+    .hero-text {
+      padding-bottom:85px;
     }
 
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto 1.2rem;
-      font-size: 1rem;
+    .hero-text h1 {
+      color:var(--azul-oscuro);
+      font-size:2.75rem;
+      line-height:1.1;
+      margin:0 0 18px;
+      max-width:600px;
     }
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 1.5rem;
+    .hero-text h1 span {
+      color:var(--azul-claro);
+      display:block;
     }
 
-    section {
-      margin-bottom: 2.8rem;
+    .hero-text p {
+      color:#1f3d5a;
+      font-size:1.08rem;
+      max-width:560px;
+      margin-bottom:22px;
     }
 
-    h2 {
-      color: var(--fucsia-oscuro);
-      border-bottom: 2px solid var(--fucsia);
-      padding-bottom: 6px;
+    .hero-photo {
+      display:flex;
+      justify-content:center;
+      align-items:flex-end;
+      height:100%;
     }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 1.5rem;
+    .doctor-container {
+      text-align:center;
+      position:relative;
+      padding-bottom:78px;
     }
 
-    .card {
-      background: #ffffff;
-      border: 1px solid var(--borde-rosado);
-      border-radius: 14px;
-      padding: 1.2rem;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    .hero-photo img {
+      max-width:560px;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      object-position:bottom center;
+      margin-bottom:0;
+      border-radius:0;
+      display:block;
+      filter:drop-shadow(0 18px 35px rgba(0,62,138,0.20));
     }
 
-    .card h3 {
-      color: var(--fucsia-oscuro);
-      margin-top: 0;
+    .doctor-floating-card {
+      position:absolute;
+      left:50%;
+      bottom:12px;
+      transform:translateX(-50%);
+      background:#ffffff;
+      border-radius:18px;
+      padding:14px 20px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.16);
+      z-index:20;
+      min-width:280px;
     }
 
-    ul {
-      padding-left: 20px;
+    .doctor-floating-icon {
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul-claro));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:1.35rem;
+      flex-shrink:0;
     }
 
-    .notice {
-      background: var(--rosado-suave);
-      border-left: 5px solid var(--fucsia);
-      padding: 1rem;
-      border-radius: 8px;
-      margin-top: 1.5rem;
+    .doctor-floating-name {
+      color:var(--azul-oscuro);
+      font-size:1.15rem;
+      font-weight:700;
+      line-height:1.1;
+      text-align:left;
+    }
+
+    .doctor-floating-specialty {
+      color:#3f6f8f;
+      font-size:0.9rem;
+      margin-top:4px;
+      font-weight:600;
+      text-align:left;
     }
 
     .button {
-      display: inline-block;
-      background: linear-gradient(90deg, var(--fucsia-oscuro), var(--fucsia-claro));
-      color: #fff;
-      padding: 11px 22px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 1rem;
-      box-shadow: 0 4px 12px rgba(214, 51, 132, 0.25);
+      display:inline-block;
+      color:#fff;
+      padding:13px 24px;
+      border-radius:28px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-top:8px;
+      transition:all 0.25s ease;
     }
 
     .button:hover {
-      background: linear-gradient(90deg, #a71963, #e8528a);
+      transform:translateY(-2px);
+    }
+
+    .whatsapp-button {
+      background:linear-gradient(90deg,var(--whatsapp-oscuro),var(--whatsapp));
+      box-shadow:0 5px 14px rgba(37,211,102,0.32);
+    }
+
+    main {
+      max-width:1120px;
+      margin:auto;
+      padding:28px 18px;
+    }
+
+    section {
+      margin-bottom:42px;
+    }
+
+    h2 {
+      color:var(--azul-oscuro);
+      border-bottom:2px solid var(--azul);
+      padding-bottom:6px;
+    }
+
+    .section-title {
+      text-align:center;
+      color:var(--azul-oscuro);
+      font-size:1.45rem;
+      margin-bottom:25px;
+      font-weight:bold;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content:"";
+      display:inline-block;
+      width:130px;
+      height:1px;
+      background:var(--azul-claro);
+      vertical-align:middle;
+      margin:0 18px;
+    }
+
+    .intro-box {
+      background:linear-gradient(180deg,#ffffff,var(--turquesa-suave));
+      border:1px solid var(--borde-azul);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:0 8px 22px rgba(0,119,182,0.10);
+    }
+
+    .services-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+      margin-top:18px;
+    }
+
+    .card {
+      background:#ffffff;
+      border:1px solid #e3f3f8;
+      border-radius:16px;
+      padding:10px 10px 18px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.07);
+      transition:all 0.25s ease;
+      text-align:center;
+      min-height:255px;
+      overflow:hidden;
+    }
+
+    .card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 12px 26px rgba(0,119,182,0.16);
+      border-color:var(--azul-claro);
+    }
+
+    .service-img {
+      width:100%;
+      height:155px;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:12px;
+      margin-bottom:14px;
+      display:block;
+    }
+
+    .icon {
+      font-size:2.3rem;
+      color:var(--azul-claro);
+      margin-bottom:8px;
+    }
+
+    .card h3 {
+      color:var(--azul-oscuro);
+      margin:4px 0 8px;
+      font-size:1rem;
+      text-transform:uppercase;
+    }
+
+    .card p {
+      font-size:0.88rem;
+      margin:0;
+      color:#334;
+      padding:0 6px;
+      line-height:1.5;
+    }
+
+    .notice {
+      background:var(--turquesa-suave);
+      border-left:5px solid var(--azul);
+      padding:1rem;
+      border-radius:8px;
+      margin-top:1.5rem;
+    }
+
+    .trust-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      background:#e9fbff;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--borde-azul);
+      box-shadow:0 8px 22px rgba(0,119,182,0.10);
+    }
+
+    .trust-card {
+      padding:20px;
+      display:grid;
+      grid-template-columns:45px 1fr;
+      gap:12px;
+      border-right:1px solid var(--borde-azul);
+      align-items:start;
+    }
+
+    .trust-card:last-child {
+      border-right:none;
+    }
+
+    .trust-card .icon {
+      font-size:2rem;
+      margin:0;
+    }
+
+    .trust-card h3 {
+      margin:0 0 4px;
+      color:var(--azul-oscuro);
+      font-size:0.98rem;
+      text-transform:uppercase;
+    }
+
+    .trust-card p {
+      margin:0;
+      font-size:0.88rem;
+    }
+
+    .contact-footer {
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
+      color:white;
+      padding:26px 18px;
+      margin-top:20px;
+    }
+
+    .contact-footer-grid {
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:18px;
+      align-items:center;
+      text-align:center;
+    }
+
+    .contact-item strong {
+      display:block;
+      font-size:1.05rem;
+    }
+
+    .footer-icon {
+      font-size:2rem;
+      display:block;
+      margin-bottom:6px;
     }
 
     .whatsapp-float {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      background: linear-gradient(90deg, var(--fucsia-oscuro), var(--fucsia-claro));
-      color: white;
-      padding: 13px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 5px 16px rgba(0,0,0,0.28);
-      z-index: 999;
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:linear-gradient(90deg,var(--whatsapp-oscuro),var(--whatsapp));
+      color:white;
+      padding:13px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 5px 16px rgba(0,0,0,0.28);
+      z-index:999;
+    }
+
+    .home-float {
+      position:fixed;
+      left:18px;
+      bottom:18px;
+      background:#ffffff;
+      color:var(--azul-oscuro);
+      padding:13px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      border:1px solid var(--borde-azul);
+      box-shadow:0 5px 16px rgba(0,0,0,0.18);
+      z-index:999;
     }
 
     footer {
-      background: #f4f4f4;
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-      color: #555;
+      background:#f4f4f4;
+      text-align:center;
+      font-size:0.9rem;
+      padding:2rem 1rem 5rem;
+      color:#555;
     }
 
     footer h4 {
-      color: var(--fucsia-oscuro);
-      margin-top: 1.5rem;
+      color:var(--azul-oscuro);
+      margin-top:1.5rem;
     }
 
-    @media (max-width: 600px) {
-      nav a {
-        display: inline-block;
-        margin: 5px 9px;
-        font-size: 0.95rem;
+    @media(max-width:900px) {
+      .services-grid {
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:800px) {
+      .top-logo {
+        padding:0 10px 0;
       }
 
-      h1 {
-        font-size: 1.55rem;
+      .top-logo img {
+        max-width:260px;
+        width:78%;
+        height:auto;
+      }
+
+      nav {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:nowrap;
+        gap:3px;
+        padding:10px 2px;
+        overflow-x:auto;
+        scrollbar-width:none;
+      }
+
+      nav::-webkit-scrollbar {
+        display:none;
+      }
+
+      nav a {
+        margin:0;
+        padding:7px 5px;
+        font-size:0.76rem;
+        white-space:nowrap;
+        flex-shrink:0;
+      }
+
+      .social-bar {
+        gap:18px;
+        padding:14px 8px;
+      }
+
+      .social-bar a {
+        width:74px;
+        height:74px;
+      }
+
+      .social-bar img {
+        width:50px;
+        height:50px;
       }
 
       .hero {
-        padding: 2rem 1rem;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255,255,255,0.96),
+            rgba(233,251,255,0.88)
+          ),
+          url('bannermovil.jpeg');
+        background-size:cover;
+        background-position:center;
       }
 
-      .hero-box {
-        padding: 2rem 1rem;
+      .hero-content {
+        grid-template-columns:1fr;
+        min-height:auto;
+        padding:28px 18px 0;
+        text-align:center;
       }
 
-      main {
-        padding: 1.2rem;
+      .hero-text {
+        padding-bottom:0;
       }
 
-      .whatsapp-float {
-        right: 12px;
-        bottom: 12px;
-        font-size: 0.85rem;
+      .hero-text h1 {
+        font-size:1.8rem;
+        margin:auto auto 14px;
+      }
+
+      .hero-text p {
+        font-size:0.98rem;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .hero-photo {
+        margin-top:20px;
+        align-items:flex-end;
+      }
+
+      .hero-photo img {
+        max-width:340px;
+        width:100%;
+        height:auto;
+        margin-bottom:0;
+        border-radius:22px;
+        filter:drop-shadow(0 12px 22px rgba(0,62,138,0.18));
+      }
+
+      .doctor-container {
+        padding-bottom:78px;
+      }
+
+      .doctor-floating-card {
+        bottom:8px;
+        padding:12px 16px;
+        min-width:245px;
+        border-radius:16px;
+      }
+
+      .doctor-floating-icon {
+        width:46px;
+        height:46px;
+        font-size:1.15rem;
+      }
+
+      .doctor-floating-name {
+        font-size:1rem;
+      }
+
+      .doctor-floating-specialty {
+        font-size:0.82rem;
+      }
+
+      .section-title::before,
+      .section-title::after {
+        width:45px;
+        margin:0 8px;
+      }
+
+      .trust-card {
+        border-right:none;
+        border-bottom:1px solid var(--borde-azul);
+      }
+
+      .trust-card:last-child {
+        border-bottom:none;
+      }
+
+      .whatsapp-float,
+      .home-float {
+        font-size:0.8rem;
+        padding:10px 12px;
+      }
+    }
+
+    @media(max-width:560px) {
+      .services-grid {
+        grid-template-columns:1fr;
+        gap:18px;
+      }
+
+      .service-img {
+        height:180px;
+      }
+
+      .card {
+        min-height:auto;
       }
     }
   </style>
@@ -214,122 +638,243 @@
 
 <body>
 
-  <header>
-    <img src="logo-aurosanax.png" alt="Logo de Aurosanax" />
-    <p>Centro Médico Especializado en Salud Femenina</p>
+  <header id="inicio" class="top-logo">
+    <img src="logotipo.png" alt="Logotipo de Odontología Pamela">
   </header>
 
   <nav>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#inicio">INICIO</a>
+    <a href="#nosotros">NOSOTROS</a>
+    <a href="#servicios">SERVICIOS</a>
+    <a href="#confianza">CONFIANZA</a>
+    <a href="#contacto">CONTACTO</a>
   </nav>
 
-  <div class="hero">
-    <div class="hero-box">
-      <h1>Salud Femenina Integral en Guayaquil, Ecuador</h1>
-      <p>
-        Atención médica integral para mujeres, con enfoque preventivo,
-        profesional y personalizado. En AUROSANAX atendemos con cita previa.
-      </p>
-      <a href="https://wa.me/593984567660?text=Hola,%20deseo%20agendar%20una%20valoración%20médica%20en%20AUROSANAX." class="button">
-        Agendar valoración médica
-      </a>
-    </div>
+  <div class="social-bar">
+    <a href="#" aria-label="Ubicación">
+      <img src="ubicacion.png" alt="Ubicación">
+    </a>
+
+    <a href="#" aria-label="Instagram">
+      <img src="instagram.png" alt="Instagram">
+    </a>
+
+    <a href="#" aria-label="Facebook">
+      <img src="facebook.png" alt="Facebook">
+    </a>
+
+    <a href="#" aria-label="TikTok">
+      <img src="tiktok.png" alt="TikTok">
+    </a>
   </div>
+
+  <section class="hero">
+    <div class="hero-content">
+
+      <div class="hero-text">
+        <h1>
+          Sonrisas saludables y
+          <span>estética dental profesional</span>
+          en Quevedo
+        </h1>
+
+        <p>
+          Atención odontológica integral para el cuidado de tu sonrisa, con enfoque preventivo,
+          estético y personalizado. Atendemos con cita previa en la ciudad de Quevedo.
+        </p>
+
+        <a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
+           class="button whatsapp-button">
+          Agendar cita por WhatsApp
+        </a>
+      </div>
+
+      <div class="hero-photo">
+        <div class="doctor-container">
+          <img src="odontologa.png" alt="Odontóloga profesional de Odontología Pamela">
+
+          <div class="doctor-floating-card">
+            <div class="doctor-floating-icon">🦷</div>
+
+            <div>
+              <div class="doctor-floating-name">Dra. Pamela</div>
+              <div class="doctor-floating-specialty">Especialista en Odontología</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <main>
 
     <section id="nosotros">
-      <h2>Sobre AUROSANAX</h2>
-      <p>
-        En AUROSANAX brindamos atención médica integral en salud femenina,
-        priorizando ginecología, prevención, bienestar y valoración médica personalizada.
-      </p>
-      <p>
-        Cada servicio se orienta según la condición individual de la paciente,
-        con atención profesional, confidencial y ética.
-      </p>
+      <h2>Sobre Odontología Pamela</h2>
+
+      <div class="intro-box">
+        <p>
+          En Odontología Pamela brindamos atención dental integral en Quevedo,
+          priorizando la prevención, el diagnóstico oportuno y el cuidado estético
+          de la sonrisa.
+        </p>
+
+        <p>
+          Cada tratamiento se define según valoración odontológica personalizada,
+          con atención profesional, responsable y orientada al bienestar del paciente.
+        </p>
+      </div>
     </section>
 
     <section id="servicios">
-      <h2>Servicios</h2>
+      <div class="section-title">🦷 NUESTROS SERVICIOS</div>
 
       <div class="services-grid">
 
         <div class="card">
-          <h3>Ginecología General</h3>
-          <ul>
-            <li>Consulta ginecológica integral</li>
-            <li>Control ginecológico anual</li>
-            <li>Papanicolaou convencional y líquido</li>
-            <li>Colposcopía</li>
-          </ul>
+          <img src="general.jpeg" alt="Odontología general" class="service-img">
+          <h3>Odontología General</h3>
+          <p>Consulta, diagnóstico, limpieza dental profesional y control preventivo.</p>
         </div>
 
         <div class="card">
-          <h3>Salud Íntima Femenina</h3>
-          <ul>
-            <li>Labioplastia previa valoración médica</li>
-            <li>Rejuvenecimiento íntimo indicado según evaluación</li>
-            <li>Blanqueamiento genital bajo criterio médico</li>
-            <li>Hidratación íntima</li>
-            <li>Estética vulvar no invasiva</li>
-          </ul>
+          <img src="estetica.jpeg" alt="Estética dental" class="service-img">
+          <h3>Estética Dental</h3>
+          <p>Diseño de sonrisa, blanqueamiento, carillas y armonización estética.</p>
         </div>
 
         <div class="card">
-          <h3>Terapias con Sueros</h3>
-          <ul>
-            <li>Suero regenerativo celular</li>
-            <li>Apoyo inmunológico</li>
-            <li>Apoyo energético</li>
-            <li>Terapias complementarias de bienestar</li>
-            <li>Apoyo capilar y cuidado de la piel</li>
-          </ul>
+          <img src="ortodoncia.jpeg" alt="Ortodoncia" class="service-img">
+          <h3>Ortodoncia</h3>
+          <p>Valoración para brackets, ortodoncia convencional y seguimiento.</p>
         </div>
 
         <div class="card">
-          <h3>Servicios Complementarios</h3>
-          <ul>
-            <li>Charlas educativas para mujeres</li>
-            <li>Valoración médica personalizada</li>
-            <li>Recomendaciones de estilo de vida saludable</li>
-            <li>Asesoría nutricional básica</li>
-            <li>Programas integrales de salud femenina</li>
-          </ul>
+          <img src="rehabilitacion.jpeg" alt="Rehabilitación oral" class="service-img">
+          <h3>Rehabilitación Oral</h3>
+          <p>Coronas, puentes, prótesis removibles e implantes según valoración.</p>
+        </div>
+
+        <div class="card">
+          <img src="preventiva.jpeg" alt="Odontología preventiva" class="service-img">
+          <h3>Odontología Preventiva</h3>
+          <p>Profilaxis, aplicación de flúor, sellantes y educación en higiene oral.</p>
+        </div>
+
+        <div class="card">
+          <img src="familiar.jpeg" alt="Atención familiar" class="service-img">
+          <h3>Atención Familiar</h3>
+          <p>Atención para adultos, orientación para niños y control familiar.</p>
         </div>
 
       </div>
 
       <div class="notice">
-        Todo procedimiento o terapia complementaria se define según valoración médica personalizada.
+        Todo tratamiento odontológico se define únicamente después de una valoración profesional personalizada.
+      </div>
+    </section>
+
+    <section id="confianza">
+      <div class="section-title">CONFIANZA Y CUIDADO</div>
+
+      <div class="trust-grid">
+
+        <div class="trust-card">
+          <div class="icon">👩‍⚕️</div>
+          <div>
+            <h3>Atención profesional</h3>
+            <p>Evaluación personalizada y orientación según las necesidades del paciente.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="icon">🦷</div>
+          <div>
+            <h3>Equipo moderno</h3>
+            <p>Imagen clínica actual, ordenada y enfocada en atención odontológica integral.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="icon">🛡️</div>
+          <div>
+            <h3>Bioseguridad</h3>
+            <p>Atención responsable, higiene y cuidado durante cada valoración.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="icon">💙</div>
+          <div>
+            <h3>Cuidado integral</h3>
+            <p>Nos enfocamos en la salud bucal, estética y bienestar general del paciente.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
-      <p>
-        Para agendar una cita o recibir información general,
-        contáctanos vía WhatsApp.
-      </p>
-      <p>
-        <strong>Ubicación:</strong> Guayaquil, Ecuador. Atención con cita previa.
-      </p>
-      <a href="https://wa.me/593984567660?text=Hola,%20deseo%20información%20para%20agendar%20una%20cita%20en%20AUROSANAX." class="button">
-        Enviar mensaje
-      </a>
+
+      <div class="intro-box">
+        <p>
+          Para agendar una cita o recibir información general, contáctanos vía WhatsApp.
+        </p>
+
+        <p>
+          <strong>Ubicación:</strong> Quevedo, Los Ríos, Ecuador. Atención con cita previa.
+        </p>
+
+        <p>
+          <strong>WhatsApp:</strong> +593 99 747 2927
+        </p>
+
+        <a href="https://wa.me/593997472927?text=Hola,%20deseo%20información%20para%20agendar%20una%20cita%20odontológica."
+           class="button whatsapp-button">
+          Enviar mensaje por WhatsApp
+        </a>
+      </div>
     </section>
 
   </main>
 
-  <a href="https://wa.me/593984567660?text=Hola,%20deseo%20agendar%20una%20valoración%20médica%20en%20AUROSANAX." class="whatsapp-float">
+  <section class="contact-footer">
+    <div class="contact-footer-grid">
+
+      <div class="contact-item">
+        <span class="footer-icon">📍</span>
+        <strong>Quevedo, Los Ríos, Ecuador</strong>
+        Atención con cita previa
+      </div>
+
+      <div class="contact-item">
+        <span class="footer-icon">💬</span>
+        <strong>+593 99 747 2927</strong>
+        Escríbenos por WhatsApp
+      </div>
+
+      <div class="contact-item">
+        <span class="footer-icon">🕘</span>
+        <strong>Horario de atención</strong>
+        Lunes a Viernes: 9:00 - 18:00<br>
+        Sábados: 9:00 - 13:00
+      </div>
+
+    </div>
+  </section>
+
+  <a href="#inicio" class="home-float">Inicio</a>
+
+  <a href="https://wa.me/593997472927?text=Hola,%20deseo%20agendar%20una%20cita%20odontológica."
+     class="whatsapp-float">
     WhatsApp
   </a>
 
   <footer>
     <h4>Aviso Legal</h4>
-    <p>Este sitio es informativo y no sustituye la consulta médica profesional.</p>
+    <p>Este sitio es informativo y no sustituye la valoración odontológica profesional.</p>
 
     <h4>Política de Privacidad</h4>
     <p>No recopilamos información personal sin su consentimiento. Todos los datos se manejan de forma confidencial.</p>
@@ -337,9 +882,8 @@
     <h4>Política de Cookies</h4>
     <p>Este sitio puede utilizar cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas su uso.</p>
 
-    <p>&copy; 2026 AUROSANAX. Todos los derechos reservados.</p>
+    <p>&copy; 2026 Odontología Pamela. Todos los derechos reservados.</p>
   </footer>
 
 </body>
 </html>
-
